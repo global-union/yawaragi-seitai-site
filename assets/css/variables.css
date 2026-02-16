@@ -1,0 +1,48 @@
+:root {
+  /* Color Palette */
+  --color-main: #5B8C5A;       /* やわらかいグリーン / 自然・癒しの印象 */
+  --color-sub: #8FBC8F;        /* ライトグリーン / 安心感 */
+  --color-accent: #E8A87C;     /* やさしいオレンジ / CTAボタンなど */
+  --color-bg: #FAF9F6;         /* ナチュラルホワイト / 温かみのあるベース */
+  --color-text: #333333;       /* ダークグレー / 読みやすさ重視 */
+  --color-sub-text: #777777;   /* ミディアムグレー / 補足情報 */
+  --color-section-bg: #F0EDE8; /* ライトベージュ / 背景（交互） */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-border: #E0E0E0;
+
+  /* Font Families */
+  --font-heading: 'Noto Serif JP', serif;
+  --font-body: 'Noto Sans JP', sans-serif;
+  --font-number: 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --spacing-section: 80px; /* PC用セクション間隔 */
+  --spacing-section-sp: 60px; /* SP用セクション間隔 */
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px; /* 基本の角丸 */
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Box Shadow */
+  --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.08); /* 控えめなシャドウ */
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-floating: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --transition-base: 0.3s ease;
+
+  /* Z-index */
+  --z-header: 1000;
+  --z-modal: 2000;
+  --z-floating: 1500;
+}

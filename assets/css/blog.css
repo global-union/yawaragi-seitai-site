@@ -1,0 +1,187 @@
+/* Blog Filters */
+.blog-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+/* Reusing filter-btn from about.css (conceptually, but defining here for isolation) */
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background-color: var(--color-white);
+    transition: var(--transition-base);
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border-color: var(--color-main);
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.blog-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-base);
+    transition: var(--transition-base);
+    position: relative;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.blog-card.hidden {
+    display: none;
+}
+
+.blog-card.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.blog-img {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-white);
+    z-index: 2;
+}
+
+.tag-notice {
+    background-color: #2196F3;
+}
+
+/* 青系 */
+.tag-column {
+    background-color: #4CAF50;
+}
+
+/* 緑系 */
+.tag-campaign {
+    background-color: #FF9800;
+}
+
+/* オレンジ系 */
+
+.blog-content {
+    padding: 24px;
+}
+
+.blog-date {
+    display: block;
+    font-family: var(--font-number);
+    color: var(--color-sub-text);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.blog-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: var(--color-text);
+    transition: color 0.3s;
+}
+
+.blog-card:hover .blog-title {
+    color: var(--color-main);
+}
+
+.blog-excerpt {
+    font-size: 0.9rem;
+    color: var(--color-sub-text);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.6;
+}
+
+.blog-link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 60px;
+}
+
+.page-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    font-family: var(--font-number);
+    color: var(--color-text);
+    transition: var(--transition-base);
+}
+
+.page-link:hover,
+.page-link.active {
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border-color: var(--color-main);
+}
+
+.page-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-sub-text);
+    padding: 0 8px;
+}
